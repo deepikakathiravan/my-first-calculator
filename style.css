@@ -1,0 +1,125 @@
+  
+  
+  body{
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    background-color: #f8c8dc;
+    height: 100vh;
+    
+  }
+  #calculator{
+    width:90vw;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px;
+    gap:15px;
+    background-color: #f3a6c8;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  }
+  #display{
+     width: 100%;
+   max-width: 100%;
+   box-sizing: border-box;
+   font-size: clamp(1.8rem, 5vw, 3rem);
+
+   padding:10px;
+   border: none;
+   background-color: #ffedf4;
+   border-radius: 18px;
+   color:#7a1f3d;
+   text-align: right;
+   font-size: 50px;
+   font-family: Arial, Helvetica, sans-serif;
+   letter-spacing: 1px;
+   box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+   font-weight: 600;
+   padding-right: 20px;
+
+  }
+  .btns{
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(255,105,180,0.25);
+
+  }
+  
+  .buttons{
+    width: 100%;
+    aspect-ratio: 1 / 1;   /* perfect circle */
+    font-size: clamp(1rem, 4vw, 1.4rem);
+
+    border:none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: #ffdde9;
+    color:#7a1f3d;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15) 
+    inset 0 -2px 4px rgba(255, 255, 255,0.4);
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.equal{
+    grid-column: span 2;
+    background-color: #ff6f91;
+    color: white;
+   font-size: 22px;
+   border: none;
+  
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15) 
+    inset 0 -2px 4px rgba(255, 255, 255,0.4);
+
+      border-radius: 18px;
+    aspect-ratio: auto;
+    
+}
+#operator{
+    background-color: #ff7aa2;
+    color:white;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.equal:hover{
+     transform: scale(1.05); 
+     transition: 0.2 ease;
+}
+.buttons:hover{
+    transform: scale(1.05); 
+}
+.buttons:active{
+    transform: scale(0.95);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+}
+.btns:active{
+    transform: scale(0.95);
+}
+@media (max-width:480px){
+    .buttons{
+        font-size: 1rem;
+    }
+    #display{
+        height: 55px;
+    }
+      #calculator{
+        padding: 15px;
+    }
+
+    .btns{
+        gap: 8px;
+    }
+}
